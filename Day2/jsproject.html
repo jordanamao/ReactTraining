@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:lightgrey;
+        }
+
+        .header {
+            padding: 60px;
+            overflow: hidden;
+            background-color: black;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color:black;
+            color: white;
+            text-align: center;
+            padding: 5sssspx
+        }
+
+        .title {
+            top:10;
+            padding: 10px;
+            text-align: center;
+        }
+
+
+        .img {
+            width: 600px;
+            float: left;
+        }
+
+        .text {
+            width: 400px;
+            float: left;
+            text-align: center;
+        }
+
+
+        .header a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .header a.active {
+            color: white;
+        }
+
+        .header-center {
+            float: center;
+        }
+
+        @media screen and (max-width: 500px) {
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .header-right {
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-center">
+            <a class="active" href="#">The book Series</a>
+            <a class="active" href="#">Testmonials</a>
+            <a class="active" href="#">The Author</a>
+            <a class="active" href="#">Free Resources</a>
+        </div>
+    </div>
+
+
+    <div class="title">
+        <div class="header-center">
+           <h3>You don't know JavaScript</h2>
+        </div>
+    </div>
+
+
+    <div class="img" style="padding-left:80px">
+        <img src="ydkjava.jpg">
+    </div>
+
+    <div class="text">
+        <h5>Dont just drift through javascript</h5><br>
+        <h5>Understand how javascript works</h5><br>
+        <h5>Start your journey through the bumpy side of javascript</h5><br>
+        <button type="button" class="btn btn-warning">order you copy now
+        </button>
+    </div>
+
+
+    <div class="footer">
+       <p>The first ebook in the book series is absolute free.</p>
+
+    <button type="button" class="btn btn-warning">Find Out More About the Offer</button>
+    </div>
+
+</html>
