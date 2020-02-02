@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        async function add(a, b) {
+
+            if (a < 0 || b < 0)
+                throw new Error('Invalid No...');
+            else
+            return a + b;
+        }
+
+        async function test() {
+
+            try {
+                let res = await add(-10, 20);
+                alert(res);
+            } catch (err) {
+                alert(err);
+            }
+        }
+
+        test();
+        alert('........');
+
+    //people use async (this feature is ES7, make sure browser supports this), people don't use promise as much
+    //or can always use callback.
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Hello Ajax</h1>
+    <button onclick="getData()"> button</button>
+
+    <script>
+
+        function getData() {
+            var xhr = new XMLHttpRequest(); //creates new instances of xml class and variable is xhr
+            xhr.open("GET", "http://127.0.0.1:5500/text.txt", true);
+            //xhr.open("GET", "http://www.amazon.com", true);
+            xhr.send(); //send the request 
+
+            xhr.onload = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    alert(xhr.response);
+                }
+            }
+        }
+
+    //everything is on the server side, so need to seend request to get it.
+
+    </script>
+</body>
+
+</html>

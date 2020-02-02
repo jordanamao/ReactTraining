@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <script>
+    //JSON - JavaScript Object Notation
+    //Data Exchange
+    //X-UA-Compatible
+        let product = {
+            id:'1', 
+            name:'Pen', 
+            model:'PX',
+            stock:{'st':1,'wa':2}
+            };
+
+        
+        let products = [
+            {id:'1', name:'Pen', model:'PX',stock:{'st':1,'wa':2}},
+            {id:'2', name:'Mouse', model:'Vertical',stock:{'st':10,'wa':20}},
+            {id:'3', name:'keyboard', model:'KB',stock:{'st':10,'wa':20}},
+        ];
+
+        for (p of products){
+            console.log(p);
+        }
+        
+        product.stock.wa = 5;
+
+        //alert(product.stock.wa);
+        //let declares variables, so let just created 4 variables and so
+        //but without you can still call product.id, product.name
+        let {id,name,model,stock} = product;
+        alert(name);
+        alert(stock.wa);
+
+
+
+
+    </script>
+    
+</body>
+</html>

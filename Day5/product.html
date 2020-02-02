@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <script>
+
+         function Product(id,name,model){
+            this.id = id;
+            this.name = name;
+            this.model = model;
+            this.show = function(){
+               console.log(id,name,model);
+            }
+
+        }
+
+        var products = [
+            new Product(1, 'Pen', 'P1'),
+            new Product(2, 'Marker', 'P2'),
+            new Product(3, 'Notebook', 'P3'),
+            new Product(3, 'Notebook', 'P4'),
+        ];
+
+       // products.forEach(function(p){
+        //    console.log(p);
+       // })
+
+        //find finds one element, but filter returns all elements that satifies the critiria
+        var pf = products.filter(function(p){
+            return (p.id==3);
+        });
+        console.log(pf);
+ 
+    </script>
+    
+</body>
+</html>

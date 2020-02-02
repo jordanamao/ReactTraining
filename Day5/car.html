@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <script>
+        
+    class Car {
+        constructor(id,name,fuel){
+            this.id = id;
+            this.name = name;
+            this.fuel = fuel;
+        }
+            drive()
+            {
+                alert('driving.....');
+            }
+        }
+
+    class SportsCar extends Car{
+        constructor(id,name,fuel,power){
+            super(id,name,fuel);
+            this.power = power;
+        }
+        show()
+        {
+            alert(`${this.id},${this.name},${this.fuel},${this.power}`);
+        }
+
+        drive()
+            {
+                super.drive();
+                alert('driving.....SportsCar');
+            }
+    }
+
+    //let c = new Car(1,'Ferrari','Petrol');
+    //c.drive();
+
+    let sc = new SportsCar(1,'Ferrari','Petrol','2.5');
+    sc.drive();
+    sc.show();
+
+
+    </script>
+</body>
+</html>

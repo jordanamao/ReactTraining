@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+
+    /*let add =(a,b,c) => {
+        cb(a+b);
+    }
+    
+    add(10,20,(res) =>{
+        alert(res);
+    })
+    */
+
+    function add(a, b) {
+        let pro = new Promise(function (resolve, reject) {
+
+            if(a<0||b<0)
+            reject('Invalid Nos....');
+
+            else
+            resolve(a + b);
+        });
+        return pro;
+    }
+
+    add(-10, 20).then(function (res){
+        alert(res);
+    },function(err){
+        alert(err);
+    });
+
+    
+    alert('.................');
+
+
+    //practice convert to uppercase
+
+    function toUpr(a){
+        let pro1 = new Promise((resolve,reject) => {
+            resolve(a.toUpperCase());
+        });
+        return pro1;
+    }
+
+    toUpr('hello').then(function(res){
+        alert(res);
+    })
+
+    alert('....................');
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>
