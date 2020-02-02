@@ -1,0 +1,34 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+
+
+    var topics = ['React', 'HTML', 'CSS', 'HTML', 'JS', 'React', 'Angular', 'React'];
+
+    var ntopics = [];
+
+    for (n of topics) {
+        var counter = 0;
+        for (x of topics) {
+            if (n == x) {
+                counter++;
+            }
+        }
+        document.write("<h3>" + n + ":" + counter + "</h3>");
+    }
+
+</script>
+
+<body>
+
+</body>
+
+</html>

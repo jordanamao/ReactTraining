@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <script>
+
+        var topics = ['React', 'HTML'];
+
+        topics.push("Angular");
+        document.write("<h3>" + topics + "</h3>");
+        topics.unshift("Vue");
+        document.write("<h3>" + topics + "</h3>");
+        topics.pop("Angular");
+        document.write("<h3>" + topics + "</h3>");
+        topics.shift("Vue");
+        document.write("<h3>" + topics + "</h3>");
+
+        var prg = ['Java', 'C', 'Scala', 'Kotlin'];
+
+        var comb = topics.concat(prg,['Haskel','Seattle','Clojure']);
+        document.write("<h3>" + comb + "</h3>");
+
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <script>
+
+        var topics = ['React', 'HTML', 'CSS', 'JS'];
+
+        var longestWord=topics[0];
+        for (var t of topics){
+            if (t.length > longestWord.length){
+                   longestWord = t;
+            }
+        }
+        document.write("The longest word is " + longestWord);
+
+        var str = "Hello World!!";
+        document.write("<h3>" + str.toUpperCase() + "</h3>");
+        document.write("<h3>" + str.toLowerCase()+ "</h3>");
+        document.write("<h3>" + str.slice(0,3)+ "</h3>");
+        document.write("<h3>" + str.replace('l','L') + "</h3>");
+        document.write("<h3>" + str.replace('l') + "</h3>");
+
+        var x = "3+3";
+        alert(x);
+        alert(eval(x));
+    
+    </script>
+    
+</body>
+</html>

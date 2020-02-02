@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+
+        function fx(param1,param2) {
+            param1();
+            param2();
+        }
+
+        fx(function() {
+            alert('Hello....');
+        },function(){
+            alert('Welcome...');
+        });
+
+        //functions can be passed as parameters
+
+
+        //var a = function(){
+            //alert('Hello...');
+        //}
+
+        //var b = function(){
+           // alert('Welcome...');
+        //}
+
+        //fx(a,b);
+
+        //write a function which takes an array of string and convert to uppercase.
+
+        var array = ["React", "Angular", "CSS"];
+
+        function ucase(arr){
+
+            for (var i = 0; i < arr.length; i++){
+                arr[i] = arr[i].toUpperCase();
+            }
+        }
+        ucase(array);
+        alert(array);
+
+
+    </script>
+
+</head>
+
+
+<body>
+
+
+</body>
+
+</html>

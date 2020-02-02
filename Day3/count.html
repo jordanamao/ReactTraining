@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+
+    var topics = ['React','HTML','CSS','HTML','JS','React','Angular','React'];
+
+    var count1=0;
+    var count2=0;
+    var count3=0;
+    var count4=0;
+    var count5=0;
+    
+    for (n of topics){
+        if (n == 'React'){
+            count1 ++;
+        }
+
+        if (n == 'HTML'){
+            count2 ++;
+        }
+
+        if (n == 'CSS'){
+            count3 ++;
+        }
+
+        if (n == 'JS'){
+            count4 ++;
+        }
+
+        if (n == 'Angular'){
+            count5++;
+        }
+    }
+
+    document.write("React appeared:" +count1 + "times");
+    document.write("HTML appeared:" +count2 + "times");
+    document.write("CSS appeared:" +count3 + "times");
+    document.write("JS appeared:" +count4 + "times");
+    document.write("Angular appeared:" +count5 + "times");
+
+
+</script>
+
+<body>
+    
+</body>
+</html>
