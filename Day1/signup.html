@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <div>
+        <a href="signin.html">signin</a>
+        <a href="signup.html">signup</a>
+        <a href="myblog.html">home</a>
+        <a href="media.html">media</a>
+        
+    </div>
+
+
+    <marquee>
+    <img src="ThinkstockPhotos-469333148-960x540.jpg" width="600px">
+    </marquee>
+
+    <h2>Sign Up</h2>
+    <form action="http://localhost:5500/myblog.html" method="get"></form>
+    <fieldset>
+        <legend>Personal Information</legend>
+        <div>
+            Name <input type="search" name="name">
+        </div>
+
+        <div>
+            Age <input type="number" min="10" max="90">
+        </div>
+
+        <div>
+            Age <input type="range" min="10" max="90">
+        </div>
+
+        <div>
+            DOB <input type="date" name="dob">
+        </div>
+
+        <div>
+            Email <input type="email" name="email" required>
+        </div>
+
+        <div>
+            City
+             <input type="text" list="cities">
+             <datalist id="cities">
+                 <option value = "Seatle"></option>
+                 <option value = "Dallas"></option>
+             </datalist>
+    
+            <select name="city" multiple>
+                <option>Seatle</option>
+                <option selected>Newyork</option>
+                <option selected>Munich</option>
+            </select>
+        </div>
+
+        <div>
+            Interest:
+            movies <input type="checkbox" name="interest" checked>
+            sports <input type="checkbox" name="interest" checked>
+            technology <input type="checkbox" name="interest">
+        </div>
+
+        <div>
+            Would you like to subscribe for new letter?
+            Yes <input type="radio" name="newsletter">
+            No <input type="radio" name="newsletter">
+        </div>
+
+        <div>
+            <form method="post">
+                <button>Sign Up</button>
+                <input type="button" value="Next">
+        </div>
+    </fieldset>
+    </form>
+
+
+</body>
+
+</html>
