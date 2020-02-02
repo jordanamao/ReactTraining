@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <div>
+
+        <h3>Topics <input type='text'><button onclick="addlis(); ">Add</button><button onclick="removelis(); ">Remove</button></h3>
+    
+        <ol>
+        </ol>
+
+    </div>
+
+    <script>
+
+        var topics = ['React', 'HTML', 'JS'];
+
+        //two ways, adding to the DOM
+        function addlis(){
+            var li = document.createElement('li');
+            li.textContent = document.querySelector('input').value;
+            ol.append(li);
+        }
+
+
+        var ol = document.createElement('ol');
+        for (t of topics) {
+            var li = document.createElement('li');
+            li.textContent = t;
+            ol.append(li);
+        }
+        document.querySelector('div').append(ol);
+
+        //map method
+        var lis = topics.forEach(function (t) {
+            var l = document.createElement('li');
+            l.textContent = t;
+            document.querySelector('ol').append(l);
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 20px;
+            margin: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h3 {
+            color: "red";
+        }
+    </style>
+
+    <script>
+        function validate(frm) {
+            if (frm.login.value != "test") {
+                alert('wrong login');
+                return false;
+            }
+
+            if (frm.password.value != "123") {
+                alert('wrong password');
+                return false;
+            }
+
+
+            if (frm.login.value == 'test' && frm.password.value == '123') {
+                alert('Welcome')
+            }
+
+            
+            else {
+                var er = document.querySelector('#error');
+                er.textContent = 'Invalid login/password';
+                er.style.color = 'red';
+                er.style.textDecoration = 'underline';
+                return false;
+            }
+
+            return true;
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2>Sign In</h2>
+    <div>
+        <form action="dom1.html" method="get" onsubmit="validate(this)">
+            <p>Login <input type="text" name="login"> </p>
+            <p>Passowrd <input type="password" name="password"></p>
+            <p id="error"></p>
+            <button>Sign In</button>
+        </form>
+    </div>
+
+    </script>
+
+</body>
+
+</html>

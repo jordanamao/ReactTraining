@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<div>
+    <h3>Topics <input type='text' name="tx">
+        <button onclick="addnew()">Add</button></h3>
+    <ol>
+    </ol>
+</div>
+<body>
+    <script>
+         var topics = ['React', 'HTML', 'JS'];
+        window.onload = render();
+        
+        function addnew() {
+           
+            topics.push(document.querySelector("input[name='tx']").value);
+            topics.splice(0,topics.length - 1);
+            render();
+                      
+        }
+        function render() {
+            var lis = topics.forEach(function (t) {
+                var l = document.createElement('li');
+                l.textContent = t;
+                document.querySelector('ol').append(l);
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

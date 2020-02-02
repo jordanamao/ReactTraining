@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+
+    //creating new array
+    var nm = new Array('Cat', 'Dog');
+
+    function add(a, b, cb) {
+        setTimeout(function(){
+            var sum = a + b;
+            cb(sum);
+        },3000)
+    }
+
+    add(100, 200, function (res) {
+        alert('sum = ' + res);
+    });
+
+    alert('Hi there !!!!');
+    document.write('<h1>Hello World!!!');
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

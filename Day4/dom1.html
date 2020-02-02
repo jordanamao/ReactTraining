@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+
+<body>
+
+    <h1>Welcome to DOM!!</h1>
+    <h1 id="test" id='x2'>Welcome to JS!!</h1>
+
+    <script>
+        
+        var hd1=document.querySelector('h1');
+        alert(hd1.textContent);
+
+        //var hd2=document.querySelector('#x2');
+
+        var hd2=document.getElementById('x2');
+
+        alert(hd2.textContent);
+
+        alert(document.getElementByName('test').length);
+
+
+    </script>
+    
+</body>
+</html>
