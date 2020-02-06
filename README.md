@@ -1,2 +1,2 @@
 # ReactTraining
-This repository contains a six week training on React
+This repository contains a seven week training on React
