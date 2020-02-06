@@ -1,0 +1,365 @@
+Retrieving Data using the SQL SELECT Statement
+______________________________________________
+
+
+1.
+Capabilities of SQL SELECT Statement
+**************************************
+
+A SELECT Statement retrieves information from a Database.
+With the SELECT statement the following are the capabilities:
+
+1.Projection : Choose the cols in a table returned by the Query.
+Choose certain columns or all the cols from the Table.
+2.Selection : Choose the rows in a table returned by the Query.
+Choose certain rows using various conditions.
+3.Joining : Bring together data from more than one table by specifying joins.
+
+*************************************************
+
+*************************************************
+
+2.
+Basic SELECT statement
+**********************
+
+Syntax :
+SELECT *|{[DISTINCT] column|expression [aliases],...}
+FROM table
+/
+
+In the syntax :
+SELECT - is a list of one or more columns
+* - selects all the columns
+DISTINCT - suppresses the duplicate records
+column|expression - selects the named column or expression 
+alias - gives selected column different headings i.e column names
+FROM table - specifies the table containing columns
+
+
+1.SELECT identifies the columns to be displayed.
+2.FROM identifies the table containing those columns
+
+A keyword refers to an individual SQL element.
+SELECT and FROM are keywords
+A clause is a part of a SQL statement
+SELECT empno,ename.. is a clause
+A statement is a combination of two or more clauses
+SELECT * FROM emp is a SQL statement
+
+
+*************************************************
+
+*************************************************
+
+3.
+Selecting all columns
+*********************
+
+SELECT *
+FROM emp
+/
+
+SELECT *
+FROM emp/
+
+SELECT * 
+FROM emp;
+
+This selects all columns and all rows from EMP Table.
+We can even select all the columns by explicitly giving the column names
+
+SELECT empno,ename,job,mgr,hiredate,sal,comm,deptno
+FROM EMP
+/
+
+*************************************************
+
+*************************************************
+
+4.
+Selecting Specific Columns
+****************************
+
+SELECT empno,ename
+FROM EMP
+/
+
+SELECT empno, ename
+FROM EMP
+/
+
+Guidelines in writing SQL Statements
+1.SQL statements are not case sensitive
+2.SQL statements can be on one or more lines.
+3.Keywords cannot be abbreviated or split across lines.
+4.Clauses are usually placed on seperate lines.
+5.Indents are used to enchance readability.
+6.In SQL*Plus we are required to end each SQL statement using ; or / 
+
+
+*************************************************
+
+*************************************************
+
+5.
+Column Heading Defaults
+***********************
+
+1.Character and Date Column headings are left-aligned.
+2.Number column headings are right-aligned
+3.Default heading display is in UPPERCASE
+
+
+*************************************************
+
+*************************************************
+
+6.
+Arithematic Expressions
+***********************
+
+The following arithematic expressions can be used in Oracle SQL:
++ Add
+_ Subtract
+* Multiply
+/ Divide
+
+
+Division,Multiplication,Addition and Subtraction
+
+For number datatypes the arithematic expressions can be used.
+
+SELECT ename,sal,sal + 100
+FROM emp
+/
+
+
+If an arithematic expression contains more than one operator multiplication and division are evaluated first.
+Parantheses are used to override the default precedence.
+
+SELECT ename,sal,12 * sal
+FROM emp
+/
+
+SELECT ename,sal,12 * sal + 100
+FROM emp
+/
+
+SELECT ename,sal,SAL + 100 * 12
+FROM emp
+/
+
+SELECT ename,sal,12 * (sal + 100)
+FROM emp
+/
+
+*************************************************
+
+*************************************************
+
+7.
+Defining a NULL Value
+***********************
+
+a.A NULL is a value that is unavailable,unassigned,unknown.
+b.A NULL is not the same as a zero or a blank space.
+
+SELECT ename,job,comm
+FROM EMP
+/
+
+Columns of any datatype can contain null values.
+
+*************************************************
+
+*************************************************
+
+8.
+Null Values in Arithematic Expressions
+**************************************
+
+Arithematic expressions containing a NULL value evalutes to NULL.
+
+SELECT ename,sal,comm,sal * comm
+FROM EMP
+/
+
+*************************************************
+
+*************************************************
+
+9.
+Defining a Column Aliases
+*************************
+
+A Column Aliases :
+a.Renames a Column heading at run time
+b.Is useful during calculations
+c.Immediately follows the column name. The AS keyword can be used optionally between the column name and aliases.
+d.Requires double quotation marks (" ") if the aliases contains spaces or is case sensitive
+
+SELECT ename AS name,sal AS salary
+FROM EMP
+/
+
+SELECT ename name,sal salary
+FROM EMP
+/
+
+SELECT ename "Name",sal "Salary"
+FROM EMP
+/
+
+SELECT ename "Emp Name",sal * 12 "Annual Salary"
+FROM EMP
+/
+
+SELECT ename "Emp Name",sal * 12 Annual Salary
+FROM EMP
+/
+
+
+*************************************************
+
+*************************************************
+
+10.
+Concatenation Operator
+**********************
+
+A Concatenation Operator :
+a.Links columns or character strings to other columns.
+b.Is represented by two vertical bars (||)
+c.Creates a resultant column that is a character expression
+
+SELECT ename||job
+FROM EMP
+/
+
+SELECT ename||job AS "Employee and Designation"
+FROM EMP
+/
+
+*************************************************
+
+*************************************************
+
+11.
+Literal Character Strings
+*************************
+
+a.A literal is a character,a number,or a date included in SELECT statement.
+b.Date and character literal values must be enclosed within single quotation marks.
+c.Each character string is an output once for each of the row returned.
+
+SELECT ename ||' is a '||job 
+"Employee Details"
+FROM EMP
+/
+
+SELECT ename || 0 ||job  "Employee Details" FROM EMP
+/
+
+SELECT ename||': 1 Month Salary = '||sal "Monthly Salary"
+FROM EMP
+/
+
+*************************************************
+
+*************************************************
+
+12.
+Alternative Quote (q) Operator
+******************************
+
+a.Specify the own quotation mark delimiter
+b.Choose any delimiter
+c.Increase readabililty and usability
+
+
+SELECT ename||
+q'[ it's assigned Manager ID: ]'
+||mgr
+AS "Employee and Manager ID"
+FROM 
+emp
+/
+
+We can choose an convenient delimiter like [],{},() or <>
+
+
+SELECT ename||
+q'{, it's assigned Manager ID: }'
+||mgr
+AS "Employee and Manager ID"
+FROM 
+emp
+/
+
+
+SELECT ename||
+q'<, it's assigned Manager ID: >'
+||mgr
+AS "Employee and Manager ID"
+FROM 
+emp
+/
+
+-- Example without Q Operator --
+
+SELECT ename||'''s salary is '||sal "Without q Operator" 
+FROM emp
+/
+
+SELECT 'A ''double quoted'' word.' AS text FROM 
+dual
+/
+
+
+SELECT 'A ''''double quoted'''' word.' AS text FROM 
+dual
+/
+
+SELECT 'A ''''''double quoted'''''' word.' AS text FROM 
+dual
+/
+
+*************************************************
+
+*************************************************
+
+13.
+Duplicate Rows
+**************
+
+The default display of queries is all rows including duplicate rows.
+
+SELECT deptno
+FROM EMP
+/
+
+SELECT DISTINCT deptno
+FROM EMP
+/
+
+*************************************************
+
+*************************************************
+
+14.
+Displaying the Table Structure
+******************************
+
+Use the Describe command to display the structure of a Table
+
+DESCRIBE emp
+
+DESC emp
+
+NULL - indicates that the values of this column can contain NULL values
+NOT NULL - indicates that the values of this column cannot contain NULL values
+
+*************************************************
+
+*************************************************
